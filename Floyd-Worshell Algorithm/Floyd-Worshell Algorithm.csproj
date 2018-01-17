@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>onebit.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -105,7 +105,7 @@
     <None Include="Resources\eraser.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="onebit.ico" />
+    <Content Include="logo.ico" />
     <None Include="Resources\ok.png" />
     <None Include="Resources\calculate.png" />
   </ItemGroup>
