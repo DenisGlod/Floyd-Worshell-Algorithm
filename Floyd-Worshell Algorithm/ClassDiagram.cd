@@ -2,6 +2,9 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Floyd_Worshell_Algorithm.Form">
     <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>FMBAAIGCACEIIBkiAADIwYgCxBgEAQQBMAAAAYABYAI=</HashCode>
       <FileName>Form.cs</FileName>
