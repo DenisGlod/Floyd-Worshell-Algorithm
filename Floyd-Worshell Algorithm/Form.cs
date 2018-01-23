@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
-
+    
 namespace Floyd_Worshell_Algorithm
 {
     public partial class Form : System.Windows.Forms.Form
@@ -231,7 +231,7 @@ namespace Floyd_Worshell_Algorithm
             StringBuilder resultPath = new StringBuilder();
             resultPath.Append(start.Text + " -> ");
             FindPoint(start.Text, end.Text, resultPath);
-            resultPath.Append(end.Text);
+            //resultPath.Append(end.Text);
             string weight = "";
             foreach (DataGridViewRow row in dgvWeight.Rows)
             {
@@ -243,6 +243,9 @@ namespace Floyd_Worshell_Algorithm
             tbResult.AppendText("Кратчайший путь из точки " + start.Text.ToUpper() + " в точку " + end.Text.ToUpper() + " : " + resultPath.ToString() + " = " + weight);
         }
 
+        /// <summary>
+        /// Поиск кратчайшего пути в таблице dgvPath
+        /// </summary>
         private void FindPoint(string row, string column, StringBuilder sb)
         {
             string tempRow = "";

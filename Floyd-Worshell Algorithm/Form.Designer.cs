@@ -37,26 +37,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.vertexName = new System.Windows.Forms.TextBox();
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.splitter = new System.Windows.Forms.Splitter();
-            this.dgvWeight = new System.Windows.Forms.DataGridView();
-            this.dgvPath = new System.Windows.Forms.DataGridView();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.start = new System.Windows.Forms.TextBox();
-            this.end = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.rtbPath = new System.Windows.Forms.RichTextBox();
-            this.rtbWeight = new System.Windows.Forms.RichTextBox();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.tbResult = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.decide = new System.Windows.Forms.Button();
-            this.accept = new System.Windows.Forms.Button();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Open = new System.Windows.Forms.ToolStripMenuItem();
             this.Save = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +48,26 @@
             this.ClearTable2Action = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearSolutionAction = new System.Windows.Forms.ToolStripMenuItem();
             this.About = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.splitter = new System.Windows.Forms.Splitter();
+            this.dgvWeight = new System.Windows.Forms.DataGridView();
+            this.dgvPath = new System.Windows.Forms.DataGridView();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.start = new System.Windows.Forms.TextBox();
+            this.end = new System.Windows.Forms.TextBox();
+            this.accept = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.rtbPath = new System.Windows.Forms.RichTextBox();
+            this.rtbWeight = new System.Windows.Forms.RichTextBox();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.tbResult = new System.Windows.Forms.TextBox();
+            this.decide = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPath)).BeginInit();
@@ -95,6 +95,99 @@
             this.menu.Size = new System.Drawing.Size(417, 24);
             this.menu.TabIndex = 9;
             this.menu.Text = "menuStrip1";
+            // 
+            // File
+            // 
+            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Open,
+            this.Save,
+            this.toolStripMenuItem1,
+            this.Exit});
+            this.File.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.file;
+            this.File.Name = "File";
+            this.File.Size = new System.Drawing.Size(64, 20);
+            this.File.Text = "Файл";
+            // 
+            // Open
+            // 
+            this.Open.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.open;
+            this.Open.Name = "Open";
+            this.Open.Size = new System.Drawing.Size(132, 22);
+            this.Open.Text = "Открыть";
+            this.Open.Click += new System.EventHandler(this.Open_Click);
+            // 
+            // Save
+            // 
+            this.Save.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.save;
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(132, 22);
+            this.Save.Text = "Сохранить";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 6);
+            // 
+            // Exit
+            // 
+            this.Exit.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.exit;
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(132, 22);
+            this.Exit.Text = "Выход";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // правкаToolStripMenuItem
+            // 
+            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClearAllAction,
+            this.ClearTable1Action,
+            this.ClearTable2Action,
+            this.ClearSolutionAction});
+            this.правкаToolStripMenuItem.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.new_message;
+            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
+            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.правкаToolStripMenuItem.Text = "Правка";
+            // 
+            // ClearAllAction
+            // 
+            this.ClearAllAction.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
+            this.ClearAllAction.Name = "ClearAllAction";
+            this.ClearAllAction.Size = new System.Drawing.Size(183, 22);
+            this.ClearAllAction.Text = "Очистить все";
+            this.ClearAllAction.Click += new System.EventHandler(this.ClearAllAction_Click);
+            // 
+            // ClearTable1Action
+            // 
+            this.ClearTable1Action.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
+            this.ClearTable1Action.Name = "ClearTable1Action";
+            this.ClearTable1Action.Size = new System.Drawing.Size(183, 22);
+            this.ClearTable1Action.Text = "Очистить таблицу 1";
+            this.ClearTable1Action.Click += new System.EventHandler(this.ClearTable1Action_Click);
+            // 
+            // ClearTable2Action
+            // 
+            this.ClearTable2Action.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
+            this.ClearTable2Action.Name = "ClearTable2Action";
+            this.ClearTable2Action.Size = new System.Drawing.Size(183, 22);
+            this.ClearTable2Action.Text = "Очистить таблицу 2";
+            this.ClearTable2Action.Click += new System.EventHandler(this.ClearTable2Action_Click);
+            // 
+            // ClearSolutionAction
+            // 
+            this.ClearSolutionAction.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
+            this.ClearSolutionAction.Name = "ClearSolutionAction";
+            this.ClearSolutionAction.Size = new System.Drawing.Size(183, 22);
+            this.ClearSolutionAction.Text = "Очистить решение";
+            this.ClearSolutionAction.Click += new System.EventHandler(this.ClearSolutionAction_Click);
+            // 
+            // About
+            // 
+            this.About.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.about;
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(110, 20);
+            this.About.Text = "О программе";
+            this.About.Click += new System.EventHandler(this.About_Click);
             // 
             // openFileDialog
             // 
@@ -221,10 +314,39 @@
             this.panel1.Size = new System.Drawing.Size(417, 66);
             this.panel1.TabIndex = 14;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(352, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Конец:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(295, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Начало:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Название вершин:";
+            // 
             // start
             // 
             this.start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.start.Location = new System.Drawing.Point(355, 29);
+            this.start.Location = new System.Drawing.Point(298, 29);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(49, 20);
             this.start.TabIndex = 5;
@@ -232,10 +354,24 @@
             // end
             // 
             this.end.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.end.Location = new System.Drawing.Point(298, 29);
+            this.end.Location = new System.Drawing.Point(355, 29);
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(49, 20);
             this.end.TabIndex = 4;
+            // 
+            // accept
+            // 
+            this.accept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.accept.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.ok;
+            this.accept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.accept.Location = new System.Drawing.Point(215, 25);
+            this.accept.Name = "accept";
+            this.accept.Size = new System.Drawing.Size(77, 27);
+            this.accept.TabIndex = 3;
+            this.accept.Text = "Принять";
+            this.accept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.accept.UseVisualStyleBackColor = true;
+            this.accept.Click += new System.EventHandler(this.Accept_Click);
             // 
             // panel2
             // 
@@ -296,35 +432,6 @@
             this.tbResult.Size = new System.Drawing.Size(417, 21);
             this.tbResult.TabIndex = 13;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Название вершин:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Начало:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(352, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Конец:";
-            // 
             // decide
             // 
             this.decide.BackColor = System.Drawing.Color.SlateGray;
@@ -338,113 +445,6 @@
             this.decide.Text = "Решить";
             this.decide.UseVisualStyleBackColor = false;
             this.decide.Click += new System.EventHandler(this.Decide_Click);
-            // 
-            // accept
-            // 
-            this.accept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.accept.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.ok;
-            this.accept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.accept.Location = new System.Drawing.Point(215, 25);
-            this.accept.Name = "accept";
-            this.accept.Size = new System.Drawing.Size(77, 27);
-            this.accept.TabIndex = 3;
-            this.accept.Text = "Принять";
-            this.accept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.accept.UseVisualStyleBackColor = true;
-            this.accept.Click += new System.EventHandler(this.Accept_Click);
-            // 
-            // File
-            // 
-            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Open,
-            this.Save,
-            this.toolStripMenuItem1,
-            this.Exit});
-            this.File.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.file;
-            this.File.Name = "File";
-            this.File.Size = new System.Drawing.Size(64, 20);
-            this.File.Text = "Файл";
-            // 
-            // Open
-            // 
-            this.Open.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.open;
-            this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(132, 22);
-            this.Open.Text = "Открыть";
-            this.Open.Click += new System.EventHandler(this.Open_Click);
-            // 
-            // Save
-            // 
-            this.Save.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.save;
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(132, 22);
-            this.Save.Text = "Сохранить";
-            this.Save.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 6);
-            // 
-            // Exit
-            // 
-            this.Exit.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.exit;
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(132, 22);
-            this.Exit.Text = "Выход";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // правкаToolStripMenuItem
-            // 
-            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ClearAllAction,
-            this.ClearTable1Action,
-            this.ClearTable2Action,
-            this.ClearSolutionAction});
-            this.правкаToolStripMenuItem.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.new_message;
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.правкаToolStripMenuItem.Text = "Правка";
-            // 
-            // ClearAllAction
-            // 
-            this.ClearAllAction.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
-            this.ClearAllAction.Name = "ClearAllAction";
-            this.ClearAllAction.Size = new System.Drawing.Size(183, 22);
-            this.ClearAllAction.Text = "Очистить все";
-            this.ClearAllAction.Click += new System.EventHandler(this.ClearAllAction_Click);
-            // 
-            // ClearTable1Action
-            // 
-            this.ClearTable1Action.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
-            this.ClearTable1Action.Name = "ClearTable1Action";
-            this.ClearTable1Action.Size = new System.Drawing.Size(183, 22);
-            this.ClearTable1Action.Text = "Очистить таблицу 1";
-            this.ClearTable1Action.Click += new System.EventHandler(this.ClearTable1Action_Click);
-            // 
-            // ClearTable2Action
-            // 
-            this.ClearTable2Action.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
-            this.ClearTable2Action.Name = "ClearTable2Action";
-            this.ClearTable2Action.Size = new System.Drawing.Size(183, 22);
-            this.ClearTable2Action.Text = "Очистить таблицу 2";
-            this.ClearTable2Action.Click += new System.EventHandler(this.ClearTable2Action_Click);
-            // 
-            // ClearSolutionAction
-            // 
-            this.ClearSolutionAction.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.eraser;
-            this.ClearSolutionAction.Name = "ClearSolutionAction";
-            this.ClearSolutionAction.Size = new System.Drawing.Size(183, 22);
-            this.ClearSolutionAction.Text = "Очистить решение";
-            this.ClearSolutionAction.Click += new System.EventHandler(this.ClearSolutionAction_Click);
-            // 
-            // About
-            // 
-            this.About.Image = global::Floyd_Worshell_Algorithm.Properties.Resources.about;
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(110, 20);
-            this.About.Text = "О программе";
-            this.About.Click += new System.EventHandler(this.About_Click);
             // 
             // Form
             // 
